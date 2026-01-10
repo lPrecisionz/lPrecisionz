@@ -1,7 +1,7 @@
 # Hi 👋
 
 I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm actively transitioning into **systems-level development**, focusing on **C/C++** and fundamentals.
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=lPrecisionz)](https://github.com/anuraghazra/github-readme-stats)
+[![Stats](https://github-readme-stats.vercel.app/api?username=lPrecisionz)](https://github.com/anuraghazra/github-readme-stats)
 
 ## Weekly coding stats (WakaTime)
 <!--START_SECTION:waka-->
