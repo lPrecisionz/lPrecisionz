@@ -1,4 +1,6 @@
-# Hi, I'm Pedro 👋
+# Hi 👋
+
+I'm **Pedro** — I develop internal apps and automation with **Power Platform**. Lately, I’ve been putting consistent time into **C/C++** with the goal of moving into lower-level software development professionally.
 
 ## Weekly coding stats (WakaTime)
 <!--START_SECTION:waka-->
