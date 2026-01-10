@@ -1,8 +1,8 @@
-name: My 2026 coding stats
+name: WakaTime Readme
 
 on:
   schedule:
-    # daily at 03:00 UTC
+    # runs daily (cron is UTC)
     - cron: "0 3 * * *"
   workflow_dispatch:
 
@@ -11,126 +11,24 @@ permissions:
 
 jobs:
   update-readme:
+    name: Update README with WakaTime stats
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Update README section from WakaTime (2025-12-31 -> today)
-        env:
+      - uses: anmol098/waka-readme-stats@master
+        with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          START_DATE: "2025-12-31"
-          TZ: "America/Sao_Paulo"
-        run: |
-          set -e
-          export END_DATE="$(TZ=America/Sao_Paulo date +%F)"
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-          python - <<'PY'
-          import os, json, base64, re
-          from urllib.request import Request, urlopen
-          from urllib.error import HTTPError, URLError
-
-          START = os.environ["START_DATE"]
-          END = os.environ["END_DATE"]
-          API_KEY = os.environ.get("WAKATIME_API_KEY", "").strip()
-
-          if not API_KEY:
-            raise SystemExit("Missing WAKATIME_API_KEY secret.")
-
-          def seconds_to_hm(seconds: float) -> str:
-            seconds = int(seconds or 0)
-            h = seconds // 3600
-            m = (seconds % 3600) // 60
-            if h > 0 and m > 0:
-              return f"{h} hrs {m} mins"
-            if h > 0:
-              return f"{h} hrs"
-            return f"{m} mins"
-
-          def fetch_summaries(start: str, end: str) -> dict:
-            # WakaTime Summaries API supports ?start=YYYY-MM-DD&end=YYYY-MM-DD :contentReference[oaicite:1]{index=1}
-            url = f"https://api.wakatime.com/api/v1/users/current/summaries?start={start}&end={end}"
-            auth = base64.b64encode(API_KEY.encode("utf-8")).decode("utf-8")
-            # API key via HTTP Basic Auth (base64-encoded key) :contentReference[oaicite:2]{index=2}
-            req = Request(url, headers={"Authorization": f"Basic {auth}", "Accept": "application/json"})
-            try:
-              with urlopen(req, timeout=30) as resp:
-                return json.loads(resp.read().decode("utf-8"))
-            except HTTPError as e:
-              body = e.read().decode("utf-8", errors="ignore")
-              raise SystemExit(f"WakaTime HTTPError {e.code}: {body}")
-            except URLError as e:
-              raise SystemExit(f"WakaTime URLError: {e}")
-
-          data = fetch_summaries(START, END).get("data", [])
-
-          total_seconds = 0.0
-          lang_seconds = {}
-          editor_seconds = {}
-
-          def add_bucket(bucket: dict, name: str, secs: float):
-            if not name:
-              return
-            bucket[name] = bucket.get(name, 0.0) + (secs or 0.0)
-
-          for day in data:
-            gt = day.get("grand_total", {}) or {}
-            # WakaTime commonly uses total_seconds; fallback to seconds if needed.
-            total_seconds += float(gt.get("total_seconds") or gt.get("seconds") or 0)
-
-            for l in (day.get("languages") or []):
-              add_bucket(lang_seconds, l.get("name"), float(l.get("total_seconds") or l.get("seconds") or 0))
-
-            for ed in (day.get("editors") or []):
-              add_bucket(editor_seconds, ed.get("name"), float(ed.get("total_seconds") or ed.get("seconds") or 0))
-
-          def top_lines(bucket: dict, n=5):
-            items = sorted(bucket.items(), key=lambda x: x[1], reverse=True)[:n]
-            return [f"- {name}: {seconds_to_hm(secs)}" for name, secs in items] or ["- (no data yet)"]
-
-          md = []
-          md.append("## My 2026 coding stats")
-          md.append(f"_Range: {START} → {END}_")
-          md.append("")
-          md.append(f"**Total code time:** {seconds_to_hm(total_seconds)}")
-          md.append("")
-          md.append("**Languages**")
-          md.extend(top_lines(lang_seconds, n=8))
-          md.append("")
-          md.append("**Editors**")
-          md.extend(top_lines(editor_seconds, n=8))
-          md.append("")
-
-          section = "\n".join(md).strip() + "\n"
-
-          readme_path = "README.md"
-          with open(readme_path, "r", encoding="utf-8") as f:
-            readme = f.read()
-
-          start_tag = "<!--START_SECTION:waka2026-->"
-          end_tag = "<!--END_SECTION:waka2026-->"
-
-          pattern = re.compile(re.escape(start_tag) + r".*?" + re.escape(end_tag), re.DOTALL)
-          replacement = f"{start_tag}\n{section}{end_tag}"
-
-          if not pattern.search(readme):
-            raise SystemExit(
-              "Could not find markers in README.md. Add:\n"
-              "<!--START_SECTION:waka2026-->\n<!--END_SECTION:waka2026-->\n"
-            )
-
-          new_readme = pattern.sub(replacement, readme)
-          with open(readme_path, "w", encoding="utf-8") as f:
-            f.write(new_readme)
-          PY
-
-      - name: Commit & push (if changed)
-        run: |
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git commit -m "Update 2026 coding stats"
-          git push
+          SHOW_TOTAL_CODE_TIME: "True"
+          SHOW_LANGUAGE: "True"
+          SHOW_EDITORS: "True"
+          SHOW_OS: "True"
+          
+          SHOW_PROJECTS: "False"
+          SHOW_TIMEZONE: "False"
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_DAYS_OF_WEEK: "False"
+          SHOW_COMMIT: "False"
+          SHOW_LINES_OF_CODE: "False"
+          SHOW_LOC_CHART: "False"
+          SHOW_SHORT_INFO: "False"
