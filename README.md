@@ -1,6 +1,6 @@
 # Hi 👋
 
-I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm actively transitioning into **systems-level development**, focusing on **C/C++** and fundamentals.
+I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm actively transitioning into **Graphics Programming**. Currently focusing on **C/C++** fundamentals and modern OpenGL.
 
 ## Weekly coding stats (WakaTime)
 <!--START_SECTION:waka-->
