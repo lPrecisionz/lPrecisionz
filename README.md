@@ -4,25 +4,6 @@ I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm activ
 
 ## Weekly coding stats (WakaTime)
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-104%20hrs%2045%20mins-blue?style=flat)
-
-📊 **This Week I Spent My Time On** 
-
-```text
-💬 Programming Languages: 
-C++                      21 hrs 21 mins      █████████████████████████   99.88 % 
-CMake                    1 min               ░░░░░░░░░░░░░░░░░░░░░░░░░   00.08 % 
-Text                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.03 % 
-conf                     0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
-Other                    0 secs              ░░░░░░░░░░░░░░░░░░░░░░░░░   00.00 % 
-
-🔥 Editors: 
-Neovim                   21 hrs 22 mins      █████████████████████████   100.00 % 
-
-💻 Operating System: 
-Linux                    21 hrs 22 mins      █████████████████████████   100.00 % 
-```
-
 **I Mostly Code in C++** 
 
 ```text
@@ -36,5 +17,5 @@ JavaScript               1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 01/02/2026 04:57:49 UTC
+ Last Updated on 02/02/2026 04:54:31 UTC
 <!--END_SECTION:waka-->
