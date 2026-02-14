@@ -4,7 +4,7 @@ I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm activ
 
 ## Weekly coding stats (WakaTime)
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-128%20hrs%2052%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-125%20hrs%2042%20mins-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
@@ -36,5 +36,5 @@ Lua                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 13/02/2026 20:52:35 UTC
+ Last Updated on 14/02/2026 04:29:08 UTC
 <!--END_SECTION:waka-->
