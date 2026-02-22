@@ -4,19 +4,19 @@ I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm activ
 
 ## Weekly coding stats (WakaTime)
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-133%20hrs%2042%20mins-blue?style=flat)
+![Code Time](http://img.shields.io/badge/Code%20Time-133%20hrs%2053%20mins-blue?style=flat)
 
 📊 **This Week I Spent My Time On** 
 
 ```text
 💬 Programming Languages: 
-JavaScript               8 hrs 3 mins        █████████████████████████   100.00 % 
+JavaScript               2 hrs 54 mins       █████████████████████████   100.00 % 
 
 🔥 Editors: 
-Neovim                   8 hrs 3 mins        █████████████████████████   100.00 % 
+Neovim                   2 hrs 54 mins       █████████████████████████   100.00 % 
 
 💻 Operating System: 
-Linux                    8 hrs 3 mins        █████████████████████████   100.00 % 
+Linux                    2 hrs 54 mins       █████████████████████████   100.00 % 
 ```
 
 **I Mostly Code in C++** 
@@ -32,5 +32,5 @@ Lua                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 21/02/2026 04:25:11 UTC
+ Last Updated on 22/02/2026 04:46:14 UTC
 <!--END_SECTION:waka-->
