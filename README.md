@@ -10,13 +10,13 @@ I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm activ
 
 ```text
 💬 Programming Languages: 
-JavaScript               3 mins              █████████████████████████   100.00 % 
+No Activity Tracked This Week
 
 🔥 Editors: 
-Neovim                   3 mins              █████████████████████████   100.00 % 
+No Activity Tracked This Week
 
 💻 Operating System: 
-Linux                    3 mins              █████████████████████████   100.00 % 
+No Activity Tracked This Week
 ```
 
 **I Mostly Code in C++** 
@@ -32,5 +32,5 @@ Lua                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 01/03/2026 04:50:39 UTC
+ Last Updated on 02/03/2026 04:45:27 UTC
 <!--END_SECTION:waka-->
