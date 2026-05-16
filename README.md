@@ -4,6 +4,21 @@ I'm **Pedro**. I work with **Power Platform** (apps + automation), and I'm activ
 
 ## Weekly coding stats (WakaTime)
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-133%20hrs%2057%20mins-blue?style=flat)
+
+📊 **This Week I Spent My Time On** 
+
+```text
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+💻 Operating System: 
+No Activity Tracked This Week
+```
+
 **I Mostly Code in C++** 
 
 ```text
@@ -17,5 +32,5 @@ Lua                      1 repo              █░░░░░░░░░░�
 
 
 
- Last Updated on 15/05/2026 06:29:53 UTC
+ Last Updated on 16/05/2026 05:50:44 UTC
 <!--END_SECTION:waka-->
