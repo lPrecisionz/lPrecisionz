@@ -28,15 +28,15 @@ No AI Coding Activity Tracked This Week
 **I Mostly Code in C++** 
 
 ```text
-C++                      8 repos             ██████████░░░░░░░░░░░░░░░   40.00 % 
-Java                     3 repos             ████░░░░░░░░░░░░░░░░░░░░░   15.00 % 
-JavaScript               2 repos             ██░░░░░░░░░░░░░░░░░░░░░░░   10.00 % 
-Jupyter Notebook         1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.00 % 
-Lua                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.00 % 
+C++                      8 repos             ███████████░░░░░░░░░░░░░░   42.11 % 
+Java                     3 repos             ████░░░░░░░░░░░░░░░░░░░░░   15.79 % 
+Jupyter Notebook         1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.26 % 
+JavaScript               1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.26 % 
+Lua                      1 repo              █░░░░░░░░░░░░░░░░░░░░░░░░   05.26 % 
 ```
 
 
 
 
- Last Updated on 30/09/2026 09:14:31 UTC
+ Last Updated on 01/10/2026 09:42:23 UTC
 <!--END_SECTION:waka-->
